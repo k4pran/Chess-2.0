@@ -1,12 +1,14 @@
 
 
-**Start Here**
+## **Start Here**
 
 If you would like to contribute to this project here are some instructions on how to get started.
 
+If you haven't installed git install [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
 You can add suggestions, enhancements, report bugs etc by clicking on issues to work on.
 
-OPTION 1 USING GIT
+### **OPTION 1 USING GIT**
 
 1. **Fork** this repository to get your own copy of the project to work on. To do this press
 fork at the top right of this page. This will copy the project over to your own repositories.
@@ -22,13 +24,13 @@ fork at the top right of this page. This will copy the project over to your own 
 6. Go to my Chess 2.0 page and select _Pull requests_ then _New pull request_ and follow through the steps
 and they will be sent to be merged with the main branch.
 
-OPTION 2 WITHOUT GIT
+### **OPTION 2 WITHOUT GIT**
 
 1. If using git is too much just download using Clone or Download to download a zip file of the project.
 
 2. Do some code and then just email me the files and I can add them to the project.
 
-**Git commands**
+### **Git commands**
 
 Here are the main git commands you need to know. It is a commandline application and you should navigate
 to the project repository to use these commands.

@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Chess extends Application {
+    public static Stage stage;
 
     public static void main(String[] args) {
         launch(args);
@@ -14,13 +15,14 @@ public class Chess extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("mainmenu.fxml"));
+        stage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("/com/neueda13/layouts/mainmenu.fxml")) ;
 
-        primaryStage.setScene(new Scene(root));
-        primaryStage.setResizable(false);
-        primaryStage.setFullScreen(true);
-        primaryStage.setTitle("Chess 2.0");
-        primaryStage.show();
+        stage.setScene(new Scene(root));
+        stage.setResizable(false);
+        stage.setFullScreen(true);
+        stage.setTitle("Chess 2.0");
+        stage.show();
     }
 
     @Override

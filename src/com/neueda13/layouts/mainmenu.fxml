@@ -16,6 +16,7 @@
             <Button fx:id="grab" text="Start" />
             <Button text="Options" onAction="#onOptions" />
             <Button text="Exit" onAction="#onExit" />
+            <Button fx:id="generateGridBtn" text="Generate Grid" onAction="#onGenerateGrid" />
         </VBox>
     </center>
 

@@ -3,6 +3,7 @@ package com.neueda13.controllers;
 import com.neueda13.Chess;
 import javafx.fxml.FXML;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Screen;

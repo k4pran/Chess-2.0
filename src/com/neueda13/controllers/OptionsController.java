@@ -26,26 +26,12 @@ public class OptionsController {
 
     //onAction for chbResolution ele
     //Sets stage width and height based on choice
-    // TODO list of resos could be abstracted and/or made dynamic by splitting chbResolution.getValue() at
-    // TODO x and then parsing width and height i.e not need for magic numbers
-    // TODO abstraction could be done with parsing and res setting function for/if lots of resos get added
-
     @FXML
     void onChbResolution() {
         System.out.println(chbResolution.getValue());
-        switch (chbResolution.getValue()){
-            case "1920x1080":
-                Chess.stage.setWidth(1920.0);
-                Chess.stage.setHeight(1080.0);
-                break;
-            case "1366x768":
-                Chess.stage.setWidth(1366.0);
-                Chess.stage.setHeight(768.0);
-                break;
-            case "600x400":
-                Chess.stage.setWidth(600.0);
-                Chess.stage.setHeight(400.0);
-                break;
-        }
+        String[] resolution = chbResolution.getValue().split("x");
+        Chess.stage.setWidth(Double.parseDouble(resolution[0]));
+        Chess.stage.setHeight(Double.parseDouble(resolution[1]));
+    }
     }
 }

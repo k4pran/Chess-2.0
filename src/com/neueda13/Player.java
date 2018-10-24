@@ -5,19 +5,41 @@ package com.neueda13;
  */
 public class Player {
 
-    // todo -TASK-
-    /**
-     * Add properties including player first name, last name and a nickname
-     * Add a constructor
-     * Generate setters / getters
-     */
+    private String firstName;
+    private String lastName;
+    private String nickname;
 
+    public Player(String firstName, String lastName, String nickname){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nickname = nickname;
+    }
 
-    public String generateWelcomeMsg() {
-        // todo -TASK-
-        /**
-         * Complete this method to generate a welcome message using the players nickname and
-         * return as a string.
-         */
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void playerWelcomeMsg() {
+        System.out.println("Welcome to Chess 2.0 " + this.nickname);
     }
 }

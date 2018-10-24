@@ -2,8 +2,10 @@ package com.neueda13.controllers;
 
 import com.neueda13.Chess;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.stage.Screen;
 
 public class OptionsController {
     //Globals correspond to elements in respective FXML file for this controller,
@@ -47,5 +49,12 @@ public class OptionsController {
                 Chess.stage.setHeight(400.0);
                 break;
         }
+        reCenterStage();
+    }
+
+    private void reCenterStage() {
+        Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        Chess.stage.setX((primScreenBounds.getWidth() - Chess.stage.getWidth()) / 2);
+        Chess.stage.setY((primScreenBounds.getHeight() - Chess.stage.getHeight()) / 2);
     }
 }

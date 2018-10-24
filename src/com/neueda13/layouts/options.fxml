@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neueda13.controllers.OptionsController">
+
+    <top>
+        <Label text="TEST OPTIONS" BorderPane.alignment="CENTER" />
+    </top>
+
+    <center>
+        <VBox alignment="CENTER">
+            <Label text="FULLSCREEN" />
+            <CheckBox fx:id="ckbFullscreen" selected="true" onAction="#onCkbFullscreen"/>
+
+            <Label text="RESOLUTION" />
+            <ChoiceBox fx:id="chbResolution" onAction="#onChbResolution">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1920x1080" />
+                        <String fx:value="1366x768" />
+                        <String fx:value="600x400" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+        </VBox>
+    </center>
+
+</BorderPane>

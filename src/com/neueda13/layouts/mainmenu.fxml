@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neueda13.controllers.MainMenuController" prefWidth="320" prefHeight="400">
+<BorderPane prefHeight="768" prefWidth="1366" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neueda13.controllers.MainMenuController">
 
     <top>
-        <Label text="TEST HEADER" BorderPane.alignment="CENTER" />
+        <VBox alignment="BOTTOM_CENTER" prefHeight="100">
+            <Label text="TEST MAIN MENU">
+                <font>
+                    <Font size="36.0" />
+                </font></Label>
+        </VBox>
     </top>
 
     <center>
-        <VBox alignment="CENTER" prefWidth="2954.0" BorderPane.alignment="CENTER">
-            <Button fx:id="grab" text="Start" />
-            <Button text="Options" onAction="#onOptions" />
-            <Button text="Exit" onAction="#onExit" />
+        <VBox alignment="TOP_CENTER" prefWidth="2954.0" BorderPane.alignment="CENTER">
+            <Button fx:id="grab" prefHeight="40.0" prefWidth="140.0" text="Start">
+            <font>
+               <Font size="18.0" />
+            </font></Button>
+            <Button onAction="#onOptions" prefHeight="40.0" prefWidth="140.0" text="Options">
+            <font>
+               <Font size="18.0" />
+            </font></Button>
+            <Button onAction="#onExit" prefHeight="40.0" prefWidth="140.0" text="Exit">
+            <font>
+               <Font size="18.0" />
+            </font></Button>
+         <BorderPane.margin>
+            <Insets top="50.0" />
+         </BorderPane.margin>
         </VBox>
     </center>
 

@@ -2,8 +2,12 @@ package com.neueda13.controllers;
 
 import com.neueda13.Chess;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+
+import java.io.IOException;
 
 public class OptionsController {
     //Globals correspond to elements in respective FXML file for this controller,
@@ -33,5 +37,10 @@ public class OptionsController {
         Chess.stage.setWidth(Double.parseDouble(resolution[0]));
         Chess.stage.setHeight(Double.parseDouble(resolution[1]));
     }
+
+    @FXML
+    void onBtnBack() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/neueda13/layouts/mainmenu.fxml"));
+        Chess.stage.getScene().setRoot(root);
     }
 }

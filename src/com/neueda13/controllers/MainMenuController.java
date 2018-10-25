@@ -12,9 +12,6 @@ import java.io.IOException;
 public class MainMenuController {
 
     @FXML
-    private Button generateGridBtn;
-
-    @FXML
     void onExit(){
         Platform.exit();
     }

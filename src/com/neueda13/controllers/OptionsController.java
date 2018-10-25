@@ -2,23 +2,12 @@ package com.neueda13.controllers;
 
 import com.neueda13.Chess;
 import javafx.fxml.FXML;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Button;
-=======
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
->>>>>>> Made main menu useable enough to progress
-=======
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
->>>>>>> 1fd3f05a6326c1c5e5ecfd27ac72dee406dabd93
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Screen;
-
-import java.io.IOException;
 
 import java.io.IOException;
 
@@ -45,46 +34,17 @@ public class OptionsController {
     //Sets stage width and height based on choice
     @FXML
     void onChbResolution() {
-        System.out.println(chbResolution.getValue());
-
-
-        switch (chbResolution.getValue()){
-            case "1920x1080":
-                Chess.stage.setWidth(1920.0);
-                Chess.stage.setHeight(1080.0);
-                break;
-            case "1366x768":
-                Chess.stage.setWidth(1366.0);
-                Chess.stage.setHeight(768.0);
-                break;
-            case "600x400":
-                Chess.stage.setWidth(600.0);
-                Chess.stage.setHeight(400.0);
-                break;
-        }
-        reCenterStage();
-    }
-
-    private void reCenterStage() {
+        String[] resolution = chbResolution.getValue().split("x");
+        Chess.stage.setWidth(Double.parseDouble(resolution[0]));
+        Chess.stage.setHeight(Double.parseDouble(resolution[1]));
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         Chess.stage.setX((primScreenBounds.getWidth() - Chess.stage.getWidth()) / 2);
         Chess.stage.setY((primScreenBounds.getHeight() - Chess.stage.getHeight()) / 2);
-
-        String[] resolution = chbResolution.getValue().split("x");
-        Chess.stage.setWidth(Double.parseDouble(resolution[0]));
-        Chess.stage.setHeight(Double.parseDouble(resolution[1]));
-
-
-        String[] resolution = chbResolution.getValue().split("x");
-        Chess.stage.setWidth(Double.parseDouble(resolution[0]));
-        Chess.stage.setHeight(Double.parseDouble(resolution[1]));
-
     }
 
     @FXML
     void onBtnBack() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/neueda13/layouts/mainmenu.fxml"));
         Chess.stage.getScene().setRoot(root);
-
     }
 }

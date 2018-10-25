@@ -14,36 +14,35 @@
             <Label text="TEST MAIN MENU">
                 <font>
                     <Font size="36.0" />
-                </font></Label>
+                </font>
+            </Label>
         </VBox>
     </top>
 
     <center>
-
-        <VBox alignment="CENTER" prefWidth="2954.0" BorderPane.alignment="CENTER">
-            <Button fx:id="grab" text="Start" />
-            <Button text="Options" onAction="#onOptions" />
-            <Button text="Exit" onAction="#onExit" />
-            <Button fx:id="generateGridBtn" text="Generate Grid" onAction="#onGenerateGrid" />
-
-
         <VBox alignment="TOP_CENTER" prefWidth="2954.0" BorderPane.alignment="CENTER">
             <Button fx:id="grab" prefHeight="40.0" prefWidth="140.0" text="Start">
+                <font>
+                   <Font size="18.0" />
+                </font>
+            </Button>
+            <Button fx:id="generateGridBtn" onAction="#onGenerateGrid" prefHeight="40.0" prefWidth="140.0" text="Generate Grid">
             <font>
                <Font size="18.0" />
             </font></Button>
             <Button onAction="#onOptions" prefHeight="40.0" prefWidth="140.0" text="Options">
-            <font>
-               <Font size="18.0" />
-            </font></Button>
+                <font>
+                   <Font size="18.0" />
+                </font>
+            </Button>
             <Button onAction="#onExit" prefHeight="40.0" prefWidth="140.0" text="Exit">
-            <font>
-               <Font size="18.0" />
-            </font></Button>
-         <BorderPane.margin>
-            <Insets top="50.0" />
-         </BorderPane.margin>
-
+                <font>
+                   <Font size="18.0" />
+                </font>
+            </Button>
+             <BorderPane.margin>
+                <Insets top="50.0" />
+             </BorderPane.margin>
         </VBox>
     </center>
 

@@ -3,15 +3,22 @@ package com.neueda13.controllers;
 import com.neueda13.Chess;
 import javafx.fxml.FXML;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
 =======
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 >>>>>>> Made main menu useable enough to progress
+=======
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+>>>>>>> 1fd3f05a6326c1c5e5ecfd27ac72dee406dabd93
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Screen;
+
+import java.io.IOException;
 
 import java.io.IOException;
 
@@ -40,6 +47,7 @@ public class OptionsController {
     void onChbResolution() {
         System.out.println(chbResolution.getValue());
 
+
         switch (chbResolution.getValue()){
             case "1920x1080":
                 Chess.stage.setWidth(1920.0);
@@ -61,6 +69,11 @@ public class OptionsController {
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         Chess.stage.setX((primScreenBounds.getWidth() - Chess.stage.getWidth()) / 2);
         Chess.stage.setY((primScreenBounds.getHeight() - Chess.stage.getHeight()) / 2);
+
+        String[] resolution = chbResolution.getValue().split("x");
+        Chess.stage.setWidth(Double.parseDouble(resolution[0]));
+        Chess.stage.setHeight(Double.parseDouble(resolution[1]));
+
 
         String[] resolution = chbResolution.getValue().split("x");
         Chess.stage.setWidth(Double.parseDouble(resolution[0]));

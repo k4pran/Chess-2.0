@@ -26,6 +26,7 @@
             <Button text="Exit" onAction="#onExit" />
             <Button fx:id="generateGridBtn" text="Generate Grid" onAction="#onGenerateGrid" />
 
+
         <VBox alignment="TOP_CENTER" prefWidth="2954.0" BorderPane.alignment="CENTER">
             <Button fx:id="grab" prefHeight="40.0" prefWidth="140.0" text="Start">
             <font>

@@ -8,4 +8,19 @@ public class Position {
      * Top-left position should be (0, 0)
      * Create properties, constructor and accessors that represents a single position
      */
+    private int x;
+    private int y;
+
+    public Position(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
 }

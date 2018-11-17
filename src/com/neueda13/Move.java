@@ -38,6 +38,9 @@ public class Move {
     }
 
     public void updatePosition(Piece piece, Position newPosition) {
-        // todo
+
+        piece.position.setX(newPosition.getX);
+        piece.position.setY(newPosition.getY);
+
     }
 }
